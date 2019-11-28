@@ -55,6 +55,7 @@ export default {
     inputClass: {
       type: String,
       default: ""
+    }
   },
   data() {
     return {
