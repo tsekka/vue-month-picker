@@ -33,6 +33,7 @@
 import Vue from 'vue'
 import MonthPicker from './MonthPicker.vue'
 import monthPicker from './month-picker'
+import languages from "./languages";
 
 export default {
   name: 'en',
@@ -83,7 +84,13 @@ export default {
     hide () {
       this.monthPickerVisible = false
     }
-  }
+  },
+  mounted() {
+    if (this.defaultMonth && this.defaultYear) {
+      let month = languages[this.lang][this.defaultMonth - 1];
+      this.selectedDate = `${month}, ${this.defaultYear}`;
+    }
+  },
 }
 </script>
 <style scoped>
