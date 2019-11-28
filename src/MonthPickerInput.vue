@@ -6,6 +6,7 @@
     <input
       class="month-picker-input"
       :class="inputClass"
+      :placeholder="placeholder"
       type="text"
       v-model="selectedDate"
       @click="showMonthPicker()"
@@ -55,7 +56,11 @@ export default {
     inputClass: {
       type: String,
       default: ""
-    }
+    },
+    placeholder: {
+      type: String,
+      default: "",
+    },
   },
   data() {
     return {
