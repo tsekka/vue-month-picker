@@ -5,6 +5,7 @@
   >
     <input
       class="month-picker-input"
+      :class="inputClass"
       type="text"
       v-model="selectedDate"
       @click="showMonthPicker()"
@@ -49,6 +50,11 @@ export default {
         document.body.removeEventListener('click', el.event)
       }
     }
+  },
+  props: {
+    inputClass: {
+      type: String,
+      default: ""
   },
   data() {
     return {
