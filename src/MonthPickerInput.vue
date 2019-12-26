@@ -96,8 +96,8 @@ export default {
 <style scoped>
   .month-picker-input-container {
     position: relative;
-    width: 180px;
-    min-width: 140px;
+   /* width: 180px;
+    min-width: 140px; */
   }
 
   .month-picker-input {
